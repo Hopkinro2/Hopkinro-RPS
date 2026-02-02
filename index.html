@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Game Setup Lobby</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="theme-light">
+  <main>
+    <h1>Game Setup Lobby</h1>
+    
+    <section aria-labelledby="settings-heading" class="card">
+      <h2 id="settings-heading">Player Settings</h2>
+
+      <div role="status" aria-live="polite" data-testid="greeting"></div>
+
+      <form id="settings-form">
+        <div class="field">
+          <label for="player-name">Player name</label>
+          <input
+            id="player-name"
+            name="player-name"
+            type="text"
+            minlength="2"
+            maxlength="15"
+            required
+            autocomplete="nickname"
+          />
+        </div>
+
+        <fieldset class="field">
+          <legend>Choose your avatar</legend>
+          <div class="avatar-options">
+            <label class="avatar-option">
+              <input type="radio" name="avatar" value="wizard" />
+              <img src="./assets/avatars/wizard.png" alt="Wizard avatar" />
+              <span>Wizard</span>
+            </label>
+            <label class="avatar-option">
+              <input type="radio" name="avatar" value="knight" />
+              <img src="./assets/avatars/knight.png" alt="Knight avatar" />
+              <span>Knight</span>
+            </label>
+            <label class="avatar-option">
+              <input type="radio" name="avatar" value="ninja" />
+              <img src="./assets/avatars/ninja.png" alt="Ninja avatar" />
+              <span>Ninja</span>
+            </label>
+            <label class="avatar-option">
+              <input type="radio" name="avatar" value="sorceress" />
+              <img src="./assets/avatars/sorceress.png" alt="Sorceress avatar" />
+              <span>Sorceress</span>
+            </label>
+            <label class="avatar-option">
+              <input type="radio" name="avatar" value="valkyrie" />
+              <img src="./assets/avatars/valkyrie.png" alt="Valkyrie avatar" />
+              <span>Valkyrie</span>
+            </label>
+            <label class="avatar-option">
+              <input type="radio" name="avatar" value="assassin" />
+              <img src="./assets/avatars/assassin.png" alt="Assassin avatar" />
+              <span>Assassin</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="difficulty">Difficulty</label>
+          <select id="difficulty" name="difficulty">
+            <option value="easy">easy</option>
+            <option value="normal" selected>normal</option>
+            <option value="hard">hard</option>
+          </select>
+        </div>
+
+        <div class="field checkbox">
+          <label>
+            <input id="theme-toggle" type="checkbox" />
+            Dark Theme
+          </label>
+        </div>
+
+        <button id="save-settings" type="submit">Save Settings</button>
+      </form>
+
+
+    <div class="game-actions">
+      <button id="start-game" type="button" disabled>Start Game</button>
+    </div>
+
+    </section>
+  </main>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
